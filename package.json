@@ -5,8 +5,15 @@
   "homepage": "https://github.com/ARMmbed/dapjs",
   "license": "MIT",
   "main": "dist/dap.umd.js",
-  "module": "dist/dap.esm.js",
+  "module": "dist/dap.esm.mjs",
   "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/dap.esm.mjs",
+      "require": "./dist/dap.umd.js",
+      "types": "./types/index.d.ts"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/ARMmbed/dapjs.git"
